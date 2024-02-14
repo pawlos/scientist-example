@@ -42,9 +42,9 @@ app.MapGet("/weatherforecast", () =>
         return Scientist.Science<WeatherForecast[]>("weather-forecast", experiment =>
         {
             // https://github.com/scientistproject/Scientist.net
-            experiment.Use(WeatherForecastsOld);
-            experiment.Try("RandomNumberGenerator", WeatherForecastsNew);
-            experiment.Try("Static", WeatherForecastsStatic);
+            experiment.Use(WeatherForecastsOld); // old
+            experiment.Try("RandomNumberGenerator", WeatherForecastsNew); // experiment 1
+            experiment.Try("Static", WeatherForecastsStatic); // experiment 2
             /*
              * Define custom comparison logic
              * experiment.Compare((x, y) => x.Name == y.Name);
