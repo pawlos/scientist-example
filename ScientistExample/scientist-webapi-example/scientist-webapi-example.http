@@ -1,0 +1,6 @@
+@scientist_webapi_example_HostAddress = http://localhost:5050
+
+GET {{scientist_webapi_example_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
