@@ -118,4 +118,8 @@ WeatherForecast[] WeatherForecastsStatic()
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    public override string ToString()
+    {
+        return "Temp: " + TemperatureC + "C, " + Summary + " on " + Date.ToString("d") + " (" + TemperatureF + "F)";
+    }
 }
